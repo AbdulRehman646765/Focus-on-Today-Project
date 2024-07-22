@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #48a30012;
+  margin: 0;
+}
+main {
+  padding: 0 16px 35px;
+}
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #48a300;
+  text-align: center;
+}
+.title span {
+  color: #61481c;
+}
+.container {
+  background-color: #fbfbfb;
+  max-width: 660px;
+  border-radius: 15px;
+  margin-inline: auto;
+  padding: 32px 48px;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
+}
+.sub-title {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+}
+.sub-title img {
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.sub-title .sun-face {
+  position: absolute;
+  left: 131px;
+  top: 22px;
+  z-index: 1;
+}
+
+.sub-title .sun-animate {
+  position: absolute;
+  left: 110px;
+  z-index: 1;
+  animation-name: animate;
+  animation-timing-function: steps(13);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.progress-label {
+  color: #858585;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  background-color: #48a3001a;
+  height: 30px;
+  border-radius: 15px;
+}
+.progress-value {
+  background-color: #48a300;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  font-size: 10px;
+  color: #eeffe0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+.progress-result {
+  padding-left: 20px;
+  min-width: max-content;
+}
+.error-label {
+  color: #ff5151;
+  font-size: 14px;
+  font-weight: 500;
+  margin-block: 20px;
+}
+.hide-error {
+  opacity: 0;
+}
+.show-error .error-label {
+  opacity: 1;
+}
+.goal-container {
+  display: flex;
+  align-items: center;
+  height: 82px;
+  border: 1px solid #0000001a;
+  border-radius: 17px;
+  background-color: #fff;
+  margin-bottom: 42px;
+  padding: 0 22px;
+}
+.custom-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #61481c4d;
+  border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.goal-container input {
+  width: 100%;
+  align-self: stretch;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  padding-left: 22px;
+}
+.goal-container input::placeholder {
+  color: #d9d9d9;
+}
+.quote {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 54px;
+}
+.made-with {
+  margin-top: 66px;
+  text-align: center;
+  font-size: 11px;
+  color: #858585;
+  font-weight: 500;
+}
+.made-with .heart {
+  color: rgb(224, 0, 0);
+  text-shadow: 0 0 3px red;
+}
+.made-with .my-name {
+  color: #48a300;
+  font-weight: 700;
+}
+.completed .custom-checkbox {
+  background-color: #48a300;
+  border: 2px solid #48a300;
+}
+.custom-checkbox .check-icon {
+  font-size: 15px;
+  color: #f6f6f6;
+  display: none;
+}
+.completed .check-icon {
+  display: block;
+}
+.completed input {
+  color: #48a300;
+  text-decoration-line: line-through;
+}
+.add-button{
+  display: flex;
+  justify-content: center;
+}
+.add-goal-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background-color: #48a300;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 30%;
+  height: 50px;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  border: 3px ridge #1e430058;
+  box-shadow: 0 0 2px #949494, 0 0 2px #949494;  
+  text-shadow: 0 0 2px #595959, 0 0 2px #595959, 0 0 2px #595959;
+}
+/**************************** Media Query *************************************/
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+  .container {
+    padding: 16px 32px;
+  }
+  .progress-bar {
+    height: 24px;
+  }
+  .goal-container {
+    height: 63px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .quote {
+    margin-top: 30px;
+  }
+  .made-with {
+    margin-top: 32px;
+    font-size: 9px;
+  }
+  .goal-container input {
+    font-size: 12px;
+  }
+}
